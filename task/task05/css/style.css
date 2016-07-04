@@ -120,6 +120,7 @@ article table {
   text-indent: 10px;
 }
 article table thead tr th {
+	
 	color:white;
     background:#333;
     text-align: left;
