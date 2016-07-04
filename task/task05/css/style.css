@@ -1,0 +1,189 @@
+*{
+	margin: 0;padding: 0;
+}
+body{
+	font-family: 'Microsoft YaHei';
+	background: #dedede;
+}
+.guide{
+	position: relative;
+	height: 60px;
+	background: #333;
+}
+nav img{
+	padding-left: 20px;
+	height: 60px;
+}
+.guide ul{
+	position: absolute;
+	top: 0px;
+	right: 10px;
+}
+.guide ul li{
+	text-align: center;
+	width: 100px;
+	display: block;
+	float: left;
+	padding: 20px 10px;
+
+}
+.guide ul li a{
+	text-decoration: none;
+	font-size: 12px;
+	color: white;
+}
+.guide ul li:hover{
+	border-bottom: 1px solid red;
+	background: #474747;
+	border-radius: 3px;
+}
+
+/*主体部分--文章1*/
+article{
+	margin-top: 20px;
+	margin-right: 380px;
+	margin-left: 20px;
+	background-color: #ffffff;
+	padding: 30px 20px;
+	box-shadow:1px 1px 2px 1px #848484;
+
+}
+
+aside{
+	width: 300px;
+	float: right;
+	margin-top: 20px;
+	margin-right: 20px;
+	padding: 20px 20px;
+	background: #ffffff;
+	box-shadow:1px 1px 2px 1px #848484;
+	
+}
+
+article h1{
+	
+	font-size: 20px;
+}
+article h3{
+	padding: 20px 0;
+	color: #808080;
+	font-size: 16px;
+}
+article h5{
+	padding: 0 0 20px;
+	color: #808080;
+}
+p{
+	text-indent: 2em;
+}
+article img{
+	padding: 15px 0;
+}
+article ul li{
+	list-style-type: none;
+	text-indent: 25px;
+}
+.shuoming{
+	margin-bottom: 10px;
+}
+article figure{
+	display: inline-block;
+	width: 160px;
+	height: 145px;
+	border: 1px solid #cccccc;
+	margin-top: 15px;
+	margin-left: 20px;
+}
+article figure figcaption{
+	text-align: center;
+	padding-top: 5px;
+}
+article figure img{
+	margin-top: 10px;
+	width: 140px;
+	height: 90px;
+	padding:5px 10px 10px;
+}
+
+article ol {
+	margin-left: 40px;
+	margin-bottom: 20px;
+	
+}
+.biaoge{
+	text-indent: 0px;
+}
+article table {
+  border: 1px solid #ccc;
+  width: 100%;
+  border-collapse: collapse;
+  text-indent: 10px;
+}
+article table thead tr th {
+	color:white;
+    background:#333;
+    text-align: left;
+  
+}
+article table thead .tablebuttom {
+ 	background: #ccc;
+}
+
+
+aside h4{
+	line-height: 40px;
+	border-left: 3px solid #ccc;
+	padding-left: 10px;
+	
+}
+
+.wrap{
+    font-size: 14px;
+    margin:15px 0px;
+}
+
+.keys{
+    float:left;
+    
+  	width: 40%;
+  	text-align: right;
+  	padding-right: 15px;
+}
+
+.hints{
+    margin-left: 35%;
+    
+    font-size:12px;
+    color: #aaa;
+}
+.gender{
+	margin-left: 20px;
+}
+aside textarea{
+	
+	margin-top: 5px;
+	width: 55%;
+	height: 100px;
+}
+.submitButton{
+	width: 100%;
+	height: 50px;
+	background-color: #128fdc;
+	font-size: 20px;
+	color: white;
+	border-radius: 10px;
+}
+.submitButton:hover{
+    background: #0063dc;
+
+}
+footer{
+	margin-top: 20px;
+	background-color: #000000;
+	color: #ffffff;
+	text-align: center;
+	height: 60px;
+	width: 100%;
+	line-height: 60px;
+	
+}

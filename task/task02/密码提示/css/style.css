@@ -1,0 +1,30 @@
+aside{
+    
+    margin:30px;padding:20px;
+    background:white;
+    box-shadow:2px 2px 2px 2px #848484;
+}
+
+.mima{
+    font-size: 14px;
+    margin:15px 0;
+}
+.tishi{
+	margin-left:35%;
+    padding-left:15px;
+    font-size:12px;
+    color: #aaa;
+}
+
+.tips{
+    float:left;           /*添加后个人描述四个字才和文本域上对齐*/
+    text-align:right;
+    width:35%;
+    padding-right:15px;
+}
+
+aside textarea{
+    width:50%;
+    height:100px;
+
+}
