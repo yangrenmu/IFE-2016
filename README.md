@@ -7,5 +7,6 @@
 * [任务五：零基础HTML及CSS编码（二） ](https://yangrenmu.github.io/IFE-2016/task/task05/index.html "task05")
 * [任务六：通过HTML及CSS模拟报纸排版](https://yangrenmu.github.io/IFE-2016/task/task06/index.html "task06") 
 * [任务七：实现常见的技术产品官网的页面架构及样式布局](https://yangrenmu.github.io/IFE-2016/task/task07/index.html "task07")  
+* [任务八：响应式网格（栅格化）布局](https://yangrenmu.github.io/IFE-2016/task/task08/index.html "task08") 
 
 
