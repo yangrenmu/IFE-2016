@@ -8,7 +8,7 @@
   E~F：匹配E后所有F，在DOM结构中，E和F处于同一级。
 * background添加两张图片；<br/><pre>
   background: url(../img/left-arrow01.png) 0px center no-repeat,
-                url(../img/left-file02.png) 15px center no-repeat;
+              url(../img/left-file02.png) 15px center no-repeat;
 * 背景图片距离右侧8px；<br/><pre>
   background-position: calc(100% - 8px) center;当宽度不同时，离右侧距离相同可以使用此方法。
 * background-size；<br/><pre>
