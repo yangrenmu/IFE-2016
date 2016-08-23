@@ -81,6 +81,7 @@ body{
     background-position: 5px;
     display: inline-block;
     margin: 20px 0 10px 50px;
+    float:left;
 }
 .left-top-top p{
     float: right;
@@ -90,11 +91,12 @@ body{
     font-weight: bold;
 }
 .left-top-bottom{
-    display: flex;
+    position:relative;
     color: #637386;
     font-size: 12px;
 }
 .left-top-bottom .text01{
+    position:absolute;
     box-sizing: border-box;
     width: 50%;
     text-align: center;
@@ -104,6 +106,7 @@ body{
     padding: 0 0 0 30px ;
 }
 .left-top-bottom .text02{
+    position:absolute;
     box-sizing: border-box;
     width: 50%;
     text-align: center;
