@@ -106,7 +106,7 @@ body{
     padding: 0 0 0 30px ;
 }
 .left-top-bottom .text02{
-    position:absolute;
+    float:right;
     box-sizing: border-box;
     width: 50%;
     text-align: center;
