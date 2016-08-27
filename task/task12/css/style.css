@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Microsoft Yahei";
+}
+.main{
+    width: 90%;
+    margin: 40px auto;
+    padding-left: 40px;
+}
+table th{
+    background: #000;
+    text-align: left;
+    color: #fff;
+}
+/*a1.nth-of-type(n)、nth-child(n):都是选中第n个元素
+     区别：p:nth-of-type(2)为选中类型为p的第二个元素;
+           p:nth-child(2)为选中第二个元素，且类型为p，若第二个元素不为p类型，则什么都不选中;
+*/
+table tr:nth-of-type(2n){
+    background: #cbcbcb;
+}
+table .td-red{
+    color: red;
+}
+.change-input{
+    margin-top: 30px;
+    width: 130px;
+    height: 20px;
+    outline: none;
+    border: 1px solid #ccc;
+    transition: width 1s ;
+    -moz-transition:width 1s ;
+    -webkit-transition:width 1s ;
+}
+.change-input:focus{
+    width: 200px;
+    border: 3px solid #75b0ec;
+    box-shadow:0 0 5px #75b0ec;
+    border-radius: 3px;
+}
+.show{
+    position: relative;
+    width: 300px;
+    margin: 40px 0;
+}
+.show .ul-box{
+    border: 3px solid #9cc5ef;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+.ul-box ul{
+    list-style-type: none;
+    width: 900px;
+    animation: slide01 3s ease infinite;
+}
+.show li{ 
+    width: 300px;
+    height: 200px;
+    float: left; 
+    font-size: 60px;
+    color: #abc;
+    padding-top: 125px;
+    text-shadow: 5px 5px 5px #FF0000;
+} 
+
+.show input{
+    display: none;
+}
+@keyframes slide01{
+    0%  {    margin-left: 0; }
+    23% {    margin-left: 0; }
+    33% {    margin-left: -300px;}
+    56% {    margin-left: -300px;}
+    66% {    margin-left: -600px;}
+    89% {    margin-left: -600px;}
+    100%{    margin-left: 0;}
+}
+@keyframes slide02{
+    0%  {    margin-left: -300px; }
+    23% {    margin-left: -300px; }
+    33% {    margin-left: -600px;}
+    56% {    margin-left: -600px;}
+    66% {    margin-left: 0;}
+    89% {    margin-left: 0;}
+    100%{    margin-left: -300px;}
+}
+@keyframes slide03{
+    0%  {    margin-left: -600px; }
+    23% {    margin-left: -600px; }
+    33% {    margin-left: 0;}
+    56% {    margin-left: 0;}
+    66% {    margin-left: -300px;}
+    89% {    margin-left: -300px;}
+    100%{    margin-left: -600px;}
+}
+.show li:nth-child(1){
+    background: url(../img/01.jpg) no-repeat;
+    background-size: 300px 200px;
+}
+.show li:nth-child(2){
+    background: url(../img/02.jpg) no-repeat;
+    background-size: 300px 200px;
+}
+.show li:nth-child(3){
+    background: url(../img/03.jpg) no-repeat;
+    background-size: 300px 200px;
+}
+.lable-box{
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    bottom: -20px;
+    right: -5px;
+}
+.lable-box label{
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    opacity: 0.5;
+    color: #fff;
+    margin: -2px;
+    display: inline-block;
+    cursor: pointer;
+}
+.l01:checked ~ .ul-box ul{
+    animation-name: slide01;
+}
+.l02:checked ~ .ul-box ul{
+    animation-name: slide02;
+}
+.l03:checked ~ .ul-box ul{
+    animation-name: slide03;
+}
