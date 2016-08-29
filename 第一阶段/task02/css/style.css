@@ -40,26 +40,12 @@ nav img{
 
 /*主体部分--文章1*/
 article{
-	margin-top: 20px;
-	margin-right: 380px;
-	margin-left: 20px;
+	margin: 20px;
 	background-color: #ffffff;
 	padding: 30px 20px;
 	box-shadow:1px 1px 2px 1px #848484;
 
 }
-
-aside{
-	width: 300px;
-	float: right;
-	margin-top: 20px;
-	margin-right: 20px;
-	padding: 20px 20px;
-	background: #ffffff;
-	box-shadow:1px 1px 2px 1px #848484;
-	
-}
-
 article h1{
 	
 	font-size: 20px;
@@ -83,26 +69,18 @@ article ul li{
 	list-style-type: none;
 	text-indent: 25px;
 }
-.shuoming{
-	margin-bottom: 10px;
-}
 article figure{
-	display: inline-block;
-	width: 160px;
-	height: 145px;
+	width: 260px;
+	height: 200px;
 	border: 1px solid #cccccc;
-	margin-top: 15px;
-	margin-left: 20px;
+	margin: 10px 0px 0px 50px ;
 }
 article figure figcaption{
 	text-align: center;
 	padding-top: 5px;
 }
 article figure img{
-	margin-top: 10px;
-	width: 140px;
-	height: 90px;
-	padding:5px 10px 10px;
+	padding:12px 10px 10px;
 }
 
 article ol {
@@ -120,7 +98,6 @@ article table {
   text-indent: 10px;
 }
 article table thead tr th {
-	
 	color:white;
     background:#333;
     text-align: left;
@@ -130,7 +107,13 @@ article table thead .tablebuttom {
  	background: #ccc;
 }
 
-
+aside{
+	margin: 40px 20px 20px ;
+	padding: 20px 20px;
+	background: #ffffff;
+	box-shadow:1px 1px 2px 1px #848484;
+	
+}
 aside h4{
 	line-height: 40px;
 	border-left: 3px solid #ccc;
@@ -144,16 +127,15 @@ aside h4{
 }
 
 .keys{
-    float:left;
-    
+    float:left;  
   	width: 40%;
   	text-align: right;
   	padding-right: 15px;
 }
 
-.hints{
-    margin-left: 45%;
-    
+.hints{  
+	margin-left:40%;
+    padding-left:15px; 
     font-size:12px;
     color: #aaa;
 }
@@ -161,9 +143,7 @@ aside h4{
 	margin-left: 20px;
 }
 aside textarea{
-	
-	margin-top: 5px;
-	width: 55%;
+	width: 50%;
 	height: 100px;
 }
 .submitButton{
@@ -179,7 +159,6 @@ aside textarea{
 
 }
 footer{
-	margin-top: 20px;
 	background-color: #000000;
 	color: #ffffff;
 	text-align: center;
