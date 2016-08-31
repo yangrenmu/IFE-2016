@@ -3,7 +3,7 @@
     ^　　　　　　　　 　：　开始匹配；
     [A-z\u4e00-\u9fff]：　查找[]之间任何字符；
     A-z　　　　　　　 　：　查找任何从大写A到小写z的字符；
-    \uxxx　　　　　　　：　查找以十六进制数xxx规定的Unicode字符；
+    \uxxx　　　　　　 　：　查找以十六进制数xxx规定的Unicode字符；
     \u4e00-\u9fff　 　：　查找中文字符；
     n+　　　　　　　　　：　匹配任何包含至少一个n的字符串。
 2.  return;<br><pre>
