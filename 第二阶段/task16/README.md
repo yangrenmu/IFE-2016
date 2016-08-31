@@ -10,5 +10,5 @@
     终止函数的执行并返回函数的值。此处作用是弹出城市名必须为中英文后，不再弹出下面的alert;
 3.  aqiData[city]=num;<br><pre>
     为aqiData对象添加值为num的city属性，city=document.getElementById('aqi-city-input').value.trim();
-4.  addEventListener(事件，函数);
+4.  addEventListener(事件，函数);<br><pre>
     给元素绑定事件。
