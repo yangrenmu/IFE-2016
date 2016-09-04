@@ -81,6 +81,7 @@ window.onload=function(){
         ul.innerHTML=text;
     }
     random.addEventListener('click',function(){
+        data=[];
         for(var i=0;i<20;i++){
             data[i]=Math.floor(Math.random()*90+10);
         }
