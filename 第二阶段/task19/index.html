@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task19</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+} 
+body{
+    padding: 20px;
+    font-family: "Microsoft Yahei";
+}
+.wrap{
+    width: 700px;
+    margin: 20px auto;
+}
+.left{
+    float: left;
+    width: 200px;
+    height: 180px;
+    margin-left: 40px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 5px;
+}
+.left .button,.left .random,.left .sort{
+    width: 70px;
+    height: 30px;
+    margin: 5px 5px;
+    background: #00bc9b;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+}
+#num-input{
+    display: block;
+    width: 100px;
+    height: 25px;
+    margin: 10px auto;
+    font-size: 16px;
+    padding-left: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+.right{
+    margin-left: 40px;
+    float: left;
+    width: 400px;
+    height: 180px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#show{
+    display: flex;
+    height: 180px;
+    align-items: flex-end;
+    justify-content: flex-start;   
+    box-sizing: border-box;
+}
+#show li{
+    display:inline-block;
+    color:#FFF;
+    background: #c81623;
+    font-size:12px;
+    margin-left:4px;
+    width: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="left">
+            <input id="num-input" type="text" >
+            <input class="button" type="button" value="左侧入" >
+            <input class="button" type="button" value="右侧入" >
+            <input class="button" type="button" value="左侧出" >
+            <input class="button" type="button" value="右测出" >
+            <input id="random" class="random" type="button" value="随机生成">
+            <input id="sort" class="sort" type="button" value="排序">
+        </div>
+        <div class="right">
+            <ul id="show"></ul>
+        </div>
+    </div>
+    
+    
+    
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
