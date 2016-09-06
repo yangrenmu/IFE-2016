@@ -7,5 +7,6 @@
 * [任务十七：零基础JavaScript编码（五）](https://yangrenmu.github.io/IFE-2016/第二阶段/task17/index.html "task17")
 * [任务十八：基础JavaScript练习（一）](https://yangrenmu.github.io/IFE-2016/第二阶段/task18/index.html "task18")
 * [任务十九：基础JavaScript练习（二）](https://yangrenmu.github.io/IFE-2016/第二阶段/task19/index.html "task19")
+* [任务二十：基础JavaScript练习（三）](https://yangrenmu.github.io/IFE-2016/第二阶段/task20/index.html "task20")
 
 
