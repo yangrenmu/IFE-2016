@@ -96,6 +96,9 @@ window.onload=function(){
         for(var i=0;i<ul.childNodes.length;i++){
             ul.childNodes[i].style.color="#fff";
         }
+        if(searchInput.value===''){
+            alert('请输入要查询的字符');
+        }
         for(var i=0;i<ul.childNodes.length;i++){
             if(ul.childNodes[i].innerHTML.indexOf(searchInput.value)!==-1){
                 ul.childNodes[i].style.color="#000";
