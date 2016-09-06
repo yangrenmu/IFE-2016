@@ -107,9 +107,9 @@ window.onload=function(){
                 ul.childNodes[i].style.color="#000";
                 ul.childNodes[i].style.background="#ffff00";
             }
-            if(flag===0){
+        }
+        if(flag===0){
                 alert('么有找到');
-            }
         }
     });
 }
