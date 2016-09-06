@@ -93,18 +93,23 @@ window.onload=function(){
     search.addEventListener('click',function(){
         console.log(searchInput.value);
         console.log(ul.childNodes.length);
+        var flag=0;
         for(var i=0;i<ul.childNodes.length;i++){
             ul.childNodes[i].style.color="#fff";
         }
         if(searchInput.value===''){
             alert('请输入要查询的字符');
+            return;
         }
         for(var i=0;i<ul.childNodes.length;i++){
             if(ul.childNodes[i].innerHTML.indexOf(searchInput.value)!==-1){
+                flag=1;
                 ul.childNodes[i].style.color="#000";
                 ul.childNodes[i].style.background="#ffff00";
             }
-            
+            if(flag===0){
+                alert('么有找到');
+            }
         }
     });
 }
