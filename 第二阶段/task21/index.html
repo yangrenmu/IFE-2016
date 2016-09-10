@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task21</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+} 
+body{
+    padding: 20px;
+    font-family: "Microsoft Yahei";
+}
+.wrap{
+    width: 80%;
+    margin: 0 auto;
+
+}
+.top{
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+.top input{
+    height: 25px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.top .top-show{
+    margin:10px 0;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    
+}
+.top .tag-show{
+    display: inline-flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+.top .tag-show li{
+    background: #4c9ed9;
+    color: #fff;
+    padding: 0 5px;
+    margin-left: 3px;
+}
+.top .tag-show li:hover{
+    background: #ff0000;
+}
+.top .tag-show li:hover::before{
+    content: "删除";
+    
+}
+.bottom{
+    width: 100%;
+    height: 150px;
+    position: relative;
+}
+.bottom textarea{
+    width: 250px;
+    height: 150px;
+    resize: none;
+    margin: 0px 0 0px 0;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.bottom input{
+    position: absolute;
+    top: 0px;
+    left: 260px;
+    width: 100px;
+    height: 35px;
+    background: #00bc9b;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.bottom-show{
+    margin: 10px 0;
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    
+}
+.bottom-show .text-show{
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.bottom-show .text-show li{
+    background: #4c9ed9;
+    color: #fff;
+    padding: 0 5px;
+    margin-left: 4px;
+}
+.bottom-show .text-show li:hover{
+    background: #ff0000;
+}
+.bottom-show .text-show li:hover::before{
+    content: '删除';
+}
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="top">
+            <span>Tag：</span>
+            <input id="tag-input" type="text" >
+            <div class="top-show">
+                 <ul id="tag-show" class="tag-show"></ul>
+            </div>
+        </div>     
+        <div class="bottom">
+            <textarea id="textarea" class="textarea" placeholder="请在这里输入..."></textarea>
+            <input id="button" type="button" value="确认兴趣爱好">  
+        </div>
+        <div class="bottom-show">
+            <ul id="text-show" class="text-show"></ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
