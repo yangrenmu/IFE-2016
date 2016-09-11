@@ -9,5 +9,6 @@
 * [任务十九：基础JavaScript练习（二）](https://yangrenmu.github.io/IFE-2016/第二阶段/task19/index.html "task19")
 * [任务二十：基础JavaScript练习（三）](https://yangrenmu.github.io/IFE-2016/第二阶段/task20/index.html "task20")
 * [任务二十一：基础JavaScript练习（四）](https://yangrenmu.github.io/IFE-2016/第二阶段/task21/index.html "task21")
+* [任务二十二：JavaScript和树（一）](https://yangrenmu.github.io/IFE-2016/第二阶段/task22/index.html "task22")
 
 
