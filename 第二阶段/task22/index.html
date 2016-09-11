@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task22</title>
+    
+<style type="text/css">
+body{
+    font-family: "Microsoft Yahei";
+}
+.wrap{
+    
+    width: 800px;
+    height: 200px;
+    margin: 100px auto 50px;
+    display: flex;
+    border: 1px solid #ccc;
+    justify-content: space-between;
+    align-items: center;
+}
+.child-1{
+    width: 350px;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    border: 1px solid #ccc;
+    justify-content: space-between;
+    align-items: center;
+}
+.child-2{
+    width: 130px;
+    height: 90px;
+    margin: auto;
+    display: flex;
+    border: 1px solid #ccc;
+}
+.child-3{
+    width: 30px;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    border: 1px solid #ccc;
+}
+.button{
+    width: 600px;
+    height: 50px;
+    display: flex;
+    margin: 0 auto;
+}
+input{
+    width: 100px;
+    height: 35px;
+    margin: 0 auto;
+    background: #00bc9b;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <div class="child-1">
+            <div class="child-2">
+                <div class="child-3"></div>
+                <div class="child-3"></div>
+            </div>
+            <div class="child-2">
+                <div class="child-3"></div>
+                <div class="child-3"></div>
+            </div>    
+        </div>
+        <div class="child-1">
+            <div class="child-2">
+                <div class="child-3"></div>
+                <div class="child-3"></div>
+            </div>
+            <div class="child-2">
+                <div class="child-3"></div>
+                <div class="child-3"></div>
+            </div>    
+        </div>
+    </div>
+    <div class="button">
+        <input type="button" value="前序遍历">
+        <input type="button" value="中序遍历">
+        <input type="button" value="后序遍历">
+    </div>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
