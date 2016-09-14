@@ -94,7 +94,7 @@ function renderTree(target){
             nodeList[i-1].style.background='#fff';
             clearInterval(timer);
         }   
-    },100); 
+    },500); 
     
 }
     
