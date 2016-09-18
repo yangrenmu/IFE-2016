@@ -11,5 +11,6 @@
 * [任务二十一：基础JavaScript练习（四）](https://yangrenmu.github.io/IFE-2016/第二阶段/task21/index.html "task21")
 * [任务二十二：JavaScript和树（一）](https://yangrenmu.github.io/IFE-2016/第二阶段/task22/index.html "task22")
 * [任务二十三：JavaScript和树（二）](https://yangrenmu.github.io/IFE-2016/第二阶段/task23/index.html "task23")
+* [任务二十四：JavaScript和树（三）](https://yangrenmu.github.io/IFE-2016/第二阶段/task24/index.html "task24")
 
 
