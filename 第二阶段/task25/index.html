@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task25</title>
+<style type="text/css">
+body{ 
+    font-family: "Microsoft Yahei";
+} 
+.wrap{ 
+    width: 600px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+} 
+.input{
+    width: 200px;
+    height: 30px;
+    border: 1px solid #fd6d25;
+    margin: 0 0 0 140px;
+    padding: 0 0 0 10px;
+    outline: none;
+    box-sizing: border-box;
+}
+.button{
+    width: 80px;
+    height: 30px;
+    margin: 20px 0 20px -7px;
+    outline: none;
+    border: none;
+    background: #fd6d25;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.contain{
+    display: flex;
+    flex-direction: column;
+    /*padding: 0 10px;*/
+    color: #00bc9b;
+}
+.node-body{
+    margin-left: 20px;
+}
+.node-hide{
+    display: none;
+}
+.empty-arrow{
+    width: 0;
+    height: 0;
+    border: 8px solid #fff;
+}
+.right-arrow{
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-left:8px solid #00bc9b;   
+}
+.down-arrow{
+    
+    width: 0;
+    height: 0;
+    margin: 5px 5px -5px -5px;
+    border: 8px solid transparent;
+    border-top:8px solid #00bc9b;   
+}
+.contain .node{
+    display: flex;
+    align-items: center;
+    margin: 5px 0 0 0;
+}
+.arrow,.node span{
+    cursor: pointer;
+}
+.node:hover > img{
+    display: block;
+    cursor: pointer;
+}
+.image-add{
+    display: none;
+    margin: 0 0 0 15px;
+}
+.image-remove{
+    display: none;
+    margin: 0 0 0 5px;
+}
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <input class="input" id="search-text" type="text" placeholder="请输入要搜索的内容">
+        <input class="button" id="search" type="button" value="搜索">
+        
+
+        <div class="contain" id="contain">
+            <div class="node-body" id="root">
+                <div class="node">
+                    <div class="arrow right-arrow"></div>
+                    <span>目录</span>
+                    <img class="image-add" src="img/add.png">
+                    <!-- <img class="image-remove" src="img/remove.png"> -->
+                </div>    
+            </div>     
+        </div>
+    </div>
+
+<script type="text/javascript" src="js/main.js" ></script>
+</body>
+</html>
