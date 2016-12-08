@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task29</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 'microsoft Yahei'
+		}
+		.contains {
+			width: 600px;
+			height: 100px;
+			margin: 100px auto 0;
+			/*border: 1px solid rgb(198,198,198) ;*/
+		}
+		.name {
+			display: inline-block;
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.text {
+			margin-left: 30px;
+			height: 50px;
+			width: 300px;
+			border-radius: 5px;
+			border: 2px solid rgb(198,198,198);
+			font-size: 20px;
+			padding: 0 0 0 20px;
+		}
+		.test {
+			margin-left: 20px;
+			width: 80px;
+			height: 50px;
+			background: rgb(47,121,186);
+			outline: none;
+			border: none;
+			border-radius: 5px;
+			color: rgb(256,256,256);
+			font-size: 20px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+		.hint {
+			font-size: 16px;
+			/*font-weight: bold;*/
+			margin: 5px 0 0 75px;
+			color: rgb(160,160,160);
+		}
+	</style>
+</head>
+<body>
+	<div class="contains">
+		<from>
+			<p class="name">名称</p>
+			<input id="text" class="text" type="text" >
+			<input id="test" class="test" type="button" value="验证">
+			<p id="hint" class="hint">必填，长度为4~16个字符</p>
+		</from>
+	</div>	
+	<script type="text/javascript">
+		window.onload = function() {
+			let textInput = document.getElementById('text');
+			let testInput = document.getElementById('test');
+			let hint = document.getElementById('hint');
+			testInput.onclick = function() {
+				let inputValue = textInput.value;
+				let chineseValue = [];
+				if (inputValue.match(/[\u4e00-\u9fa5]/g) !== null) {
+					chineseValue = inputValue.match(/[\u4e00-\u9fa5]/g);
+				}
+				
+				let strLength = inputValue.length + chineseValue.length;
+				if (strLength === 0) {
+					hint.innerHTML = '姓名不能为空';
+					hint.style.color = 'rgb(256,0,0)';
+					textInput.style.border = '2px solid rgb(256,0,0)';
+				} else if (strLength >= 4 && strLength <=16) {
+					hint.innerHTML = '名称格式正确';
+					hint.style.color = 'rgb(83,180,56)';
+					textInput.style.border = '2px solid rgb(83,180,56)';
+				} else {
+					hint.innerHTML = '必填，长度为4~16个字符';
+					hint.style.color = 'rgb(160,160,160)';
+					textInput.style.border = '2px solid rgb(160,160,160)';
+				}
+				console.log(strLength);
+			}
+		}
+	</script>
+</body>
+</html>
