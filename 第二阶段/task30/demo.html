@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task30</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 'microsoft Yahei';
+		}
+		.contains {
+			width: 550px;
+			height: 500px;
+			margin: 20px auto 0;
+			/*border: 1px solid rgb(198,198,198) ;*/
+			
+		}
+		.name {
+			display: inline-block;
+			width: 100px;
+			text-align: right;
+			line-height: 50px;
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 10px;
+			/*border: 1px solid #ccc;*/
+		}
+		.text {
+			outline: none;
+			margin-top: 10px;
+			float: right;
+			height: 50px;
+			width: 410px;
+			border-radius: 5px;
+			border: 2px solid rgb(198,198,198);
+			font-size: 18px;
+			padding: 0 0 0 10px;
+		}
+		
+		.hint {
+			font-size: 16px;
+			height: 40px;
+			/*font-weight: bold;*/
+			margin: 5px 0 0 126px;
+			color: rgb(180,180,180);
+		}
+		.button {
+			float: right;
+			width: 100px;
+			height: 40px;
+			outline: none;
+			border: none;
+			background: rgb(0,188,155);
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 18px;
+			color: rgb(256,256,256);
+		}
+	</style>
+</head>
+<body>
+	<div class="contains">
+		<from>
+			<section>
+				<p class="name">名称</p>
+				<input id="inputText1" class="text" type="text" >
+				<p class="hint" name="hint" ></p>
+			</section>
+			<section>
+				<p class="name">密码</p>
+				<input id="inputText2" class="text" type="password" >
+				<p class="hint" name="hint" ></p>
+			</section>
+			<section>
+				<p class="name">密码确认</p>
+				<input id="inputText3" class="text" type="password" >
+				<p class="hint" name="hint" ></p>
+			</section>
+			<section>
+				<p class="name">邮箱</p>
+				<input id="inputText4" class="text" type="text" >
+				<p class="hint" name="hint" ></p>
+			</section>
+			<section>
+				<p class="name">手机</p>
+				<input id="inputText5" class="text" type="text" >
+				<p class="hint" name="hint" ></p>
+			</section>
+			<section>
+				<input id="check" class="button" type="button" value="提交">
+			</section>
+			
+		</from>
+	</div>	
+	<script type="text/javascript">
+		let hintText = [{hint:"长度为4~16位字符",right:"名称格式正确",wrong:"名称格式错误"},
+				{hint:"长度为6~20位，包含数字和字母",right:"密码可用",wrong:"密码格式错误"},
+				{hint:"两次输入的密码要一致",right:"密码输入一致",wrong:"密码输入不一致"},
+				{hint:"example@haha.com",right:"邮箱格式正确",wrong:"邮箱格式错误"},
+				{hint:"请输入11位手机号码",right:"手机格式正确",wrong:"手机格式错误"}];
+		let inputs = document.getElementsByTagName('input');
+		let pHint = document.getElementsByName('hint');
+		let submitCheck = document.getElementById('check');
+
+		for(let i = 0; i < inputs.length - 1; i++) {
+			//获取焦点时，输入框蓝色，显示灰色提示
+			inputs[i].addEventListener('focus', function(e) {
+				inputs[i].style.border = '2px solid rgb(76,158,212)';
+				pHint[i].style.color = 'rgb(180,180,180)';
+				pHint[i].innerHTML = hintText[i].hint;
+			})
+			//失去焦点时，调用 checkFormat() 检测输入的格式
+			inputs[i].addEventListener('blur',function() {
+				checkFormat(i);
+			})
+		}
+
+		//提交时，检测输入是否全部正确
+		submitCheck.addEventListener('click', function(e) {
+			e.preventDefault();
+			let flag = 0;
+			for(let i = 0; i < inputs.length - 1; i++) {
+				if (checkFormat(i)) {
+					flag++;
+				}
+			}
+			if (flag === 5) {
+				alert("提交成功");
+			} else {
+				alert("提交失败");
+			}
+		})
+
+		//检测输入格式是否正确
+		function checkFormat(i) {
+			let value = inputs[i].value.trim();
+			let flag = false;
+			if (value.length === 0) {
+				inputs[i].style.border = '2px solid rgb(256,0,0)';
+				pHint[i].style.color = 'rgb(256,0,0)';
+				pHint[i].innerHTML = "输入不能为空";
+				return flag;
+			}
+
+			//验证名称
+			if (i === 0) {
+				let len = value.replace(/[\u0391-\uffe5]/g,"xx").length;
+				if (len >= 4 && len <=16) {
+					flag = true;
+				}
+			}
+
+			//验证密码
+			if (i === 1) {
+				flag = value.match(/^[a-zA-Z0-9]{6,20}$/);
+			}
+
+			//密码确认
+			if (i === 2) {
+				flag = value === inputs[i-1].value.trim()
+			}
+
+			//邮箱确认
+			if (i === 3) {
+				flag = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/.test(value);
+			}
+
+			//手机号码验证
+			if (i === 4) {
+				flag = /^[1][0-9]{10}$/.test(value);
+			}
+
+			//验证结果，正确为绿色，错误为红色
+			if(flag) {
+				pHint[i].innerHTML = hintText[i].right;
+				inputs[i].style.border = '2px solid rgb(56,189,56)';
+				pHint[i].style.color = 'rgb(56,189,56)';
+			} else {
+				pHint[i].innerHTML = hintText[i].wrong;
+				inputs[i].style.border = '2px solid rgb(256,0,0)';
+				pHint[i].style.color = 'rgb(256,0,0)';
+			}
+			return flag;
+		}
+	</script>
+</body>
+</html>
