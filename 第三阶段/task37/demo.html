@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task37</title>
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.header {
+			height: 50px;
+			min-width: 500px;
+			width: 100%;
+			background: rgb(42,44,46);		
+			cursor: pointer;
+			position: relative;
+		}
+		.headerEmersion {
+			margin-left: 46%;
+			color: #fff;
+			line-height: 50px;
+		}
+		.header:hover {
+			color: #ff0000;
+		}
+		.view {
+			height: 720px;
+			background: url(img/pic.jpg) no-repeat ;
+			background-size: cover;
+		}
+		#mask {
+			background: rgba(0, 0, 0, 0.5);
+			position: absolute;
+			z-index: 1;
+			top: 0px;
+			left: 0;
+		}
+		.login {
+			display: none;
+			position: fixed;
+			top: 100px;
+			left: calc((100% - 400px)/2);
+			z-index: 2;
+			width: 400px;
+			height: 250px;
+			background: rgb(237, 240, 242);
+		}
+		.login-top, .login-move {
+			box-sizing: border-box;
+			height: 50px;
+			width: 100%;
+			background: rgb(190, 57, 72);
+			color: #fff;
+			line-height: 50px;
+			padding-left: 30px;
+			/*禁止选中文字*/
+			-moz-user-select:none;
+			-webkit-user-select:none;
+			-user-select:none;
+		}
+		.login-move {
+			cursor: move;
+		}
+		.close {
+			float: right;
+			margin: 5px 5px 0 0 ;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			border: 1px solid #fff;
+			cursor: pointer;
+		}
+		.username {
+			display: block;
+			width: 60%;
+			height: 40px;
+			margin: 20px auto 0;
+			border: 1px solid #ccc;
+			padding-left: 10px;
+			box-sizing: border-box;
+			outline: none;
+		}
+		.password {
+			display: block;
+			outline: none;
+			width: 60%;
+			height: 40px;
+			margin: 20px auto 0;
+			border: 1px solid #ccc;
+			padding-left: 10px;
+			box-sizing: border-box;
+		}
+		.button-1,  .button-2 {
+			width: 29%;
+			height: 40px;
+			margin-top: 20px;
+			margin-left: 20%;
+			color: #fff;
+			outline: none;
+			border: none;
+			font-size: 16px;
+			background: #aaa;
+			cursor: pointer;
+		}
+		.button-2 {
+			margin-left: 0%;
+			background: rgb(60, 180, 70);
+		}
+	</style>
+</head>
+<body>
+	<header id="header" class="header">
+		<div class="headerEmersion">点这 点这 弹出浮出层</div>
+	</header>
+
+	<section>
+		<div class="view"></div>
+	</section>	
+	<section id="login" class="login">
+		<div id="login-top" class="login-top">登录（点击可拖动）
+			<div id="close" class="close">X</div>
+		</div>
+		<form>
+			<input class="username" type="text" name="username" placeholder="请输入用户名">
+			<input class="password" type="password" name="password" placeholder="请输入密码">
+			
+			<input class="button-1" type="button" name="" value="注册">
+			<input class="button-2" type="button" name="" value="登录">
+		</form>
+	</section>
+	<script type="text/javascript" src="main.js" ></script>
+</body>
+</html>
