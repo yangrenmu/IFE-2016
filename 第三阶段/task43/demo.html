@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>相册布局</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head> 
+<body>   
+	<div id="control" class="control">
+		<div class="select-menu" tabindex="0">
+			<div id="select-value" class="select-value"></div>
+			<div class="down"></div>
+			<div id="select" class="select">
+				<li class="select-li" data-selected="selected" data-value="拼图布局">拼图布局</li>
+				<li class="select-li" data-selected="" data-value="瀑布布局">瀑布布局</li>
+				<li class="select-li" data-selected="" data-value="木桶布局">木桶布局</li>
+			</div>			
+		</div>	 
+		<div id="joint-box" class="joint-box">
+			<input id="input-box" class="input-box" type="text" placeholder="请输入数字1-6">
+			<div id="hint" class="hint"></div>
+			<input class="button-box" type="button" name="" value="确定">
+		</div>
+		<div id="waterfall" class="waterfall">	
+			<p class="changeColumn">栏数:
+				<span id="column-span-left"></span>
+				<span id="column-span-middle">5</span>
+				<span id="column-span-right"></span>
+			</p>
+			<p class="distance">列间距:
+				<span id="distance-span-left"></span>
+				<span id="distance-span-middle">10px</span>
+				<span id="distance-span-right"></span>
+			</p> 
+		</div>			
+	</div>	
+	<div id="imageShow" class="imageShow"></div>
+
+
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
