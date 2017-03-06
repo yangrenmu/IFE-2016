@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task38</title>
+	<script type="text/javascript" src="js/myjQuery.js"></script>
+	<style type="text/css">
+		.my-table {
+			border-collapse: collapse;
+			margin: 50px auto 0;
+		}
+		td, th, tr {
+			border: 1px solid #bbb;
+			width: 100px;
+			height: 30px;
+			text-align: center;
+			-moz-user-select:none;
+			-webkit-user-select:none;
+			-user-select:none;
+		}
+		th {
+			background: #000;
+			color: #fff;
+			cursor: pointer;
+			position: relative;
+			border: 1px solid #fff;
+		}
+		.up {
+			width: 0px;
+			height: 0px;
+			border: 6px solid transparent;
+			border-bottom: 6px solid #fff;
+			position: absolute;
+			top: 1px;
+			right: 4px;
+		}
+		.down {
+			width: 0px;
+			height: 0px;
+			border: 6px solid transparent;
+			border-top: 6px solid #fff;
+			position: absolute;
+			bottom: 1px;
+			right: 4px;
+		}
+		.word {
+			width: 350px;
+			height: 800px;
+			margin: 50px auto 0;
+			text-align: center;
+			font-size: 18px;
+			text-shadow: 5px 5px 5px #FF0000;
+		}
+		
+	</style>
+</head>
+<body>
+	<table id="my-table" class="my-table">
+		<thead id="tr-head">
+			<tr>
+				<th>英雄</th>
+				<th class="th">力量
+					<div class="up"></div>
+					<div class="down"></div>
+				</th><!--火枪 力16 敏21 智力15 -->
+				<th class="th">敏捷
+					<div class="up"></div>
+					<div class="down"></div>
+				</th><!--蓝猫 力19 敏22 智力23 -->
+				<th class="th">智力
+					<div class="up"></div>
+					<div class="down"></div>
+				</th><!--小黑 力17 敏26 智力15 -->
+			</tr>
+		</thead>		
+	</table>
+	<div class="word">
+		<p>☟☟☟ 向下翻 ☟☟☟ 向下翻 看表头 看表头</p>
+		<p>☟☟☟ 向下翻 ☟☟☟ 向下翻 看表头 看表头</p>
+		<p>☟☟☟ 向下翻 ☟☟☟ 向下翻 看表头 看表头</p>
+		<p>☟☟☟ 向下翻 ☟☟☟ 向下翻 看表头 看表头</p>
+		<p>☟☟☟ 向下翻 ☟☟☟ 向下翻 看表头 看表头</p>
+	</div>
+	
+
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
